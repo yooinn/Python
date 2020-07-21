@@ -12,6 +12,7 @@ CELERY_QUEUES = (
 
 ENABLE_UTC=True
 CELERY_TIMEZONE = 'Asia/Shanghai'
+CELERYD_CONCURRENCY = 5    # 并发worker数
 CELERYD_MAX_TASKS_PER_CHILD = 40 # 每个worker执行了多少任务就会死掉
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0' # 把任务结果存在了Redis
 CELERY_TASK_SERIALIZER = 'msgpack' # 任务序列化和反序列化使用msgpack方案
